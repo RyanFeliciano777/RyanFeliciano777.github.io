@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Atestados</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #3498db, #8e44ad);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            width: 50%;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        p {
+            text-align: center;
+            color: #666;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        select, input[type="text"], input[type="date"], input[type="file"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Controle de Atestados</h1>
+        <p>Os atestados devem ser enviados em até 24 horas.</p>
+        
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="mes">Selecione o Mês:</label>
+                <select id="mes" name="mes">
+                    <option value="janeiro">Janeiro</option>
+                    <option value="fevereiro">Fevereiro</option>
+                    <option value="marco">Março</option>
+                    <option value="abril">Abril</option>
+                    <option value="maio">Maio</option>
+                    <option value="junho">Junho</option>
+                    <option value="julho">Julho</option>
+                    <option value="agosto">Agosto</option>
+                    <option value="setembro">Setembro</option>
+                    <option value="outubro">Outubro</option>
+                    <option value="novembro">Novembro</option>
+                    <option value="dezembro">Dezembro</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="empresa">Selecione a Empresa:</label>
+                <select id="empresa" name="empresa">
+                    <option value="UP IDEIAS">UP IDEIAS</option>
+                    <option value="CHALFIN">CHALFIN</option>
+                    <option value="CONDOR">CONDOR</option>
+                    <option value="EMPALUX">EMPALUX</option>
+                    <option value="FORTECARE">FORTECARE</option>
+                    <option value="GRUPO ALDO">GRUPO ALDO</option>
+                    <option value="HIDROMAR">HIDROMAR</option>
+                    <option value="LANAC">LANAC</option>
+                    <option value="LIVRARIAS CURITIBA">LIVRARIAS CURITIBA</option>
+                    <option value="LUSON">LUSON</option>
+                    <option value="MAX MOHR">MAX MOHR</option>
+                    <option value="PRODIET">PRODIET</option>
+                    <option value="RISOTOLÂNDIA">RISOTOLÂNDIA</option>
+                    <option value="TRANSDOTTI">TRANSDOTTI</option>
+                    <option value="TRANSPORTE GLÓRIA">TRANSPORTE GLÓRIA</option>
+                    <option value="VIAÇÃO SANTO ÂNGELO">VIAÇÃO SANTO ÂNGELO</option>
+                    <option value="COCO BAMBU">COCO BAMBU</option>
+                    <option value="REDENTOR">REDENTOR</option>
+                    <option value="COFFITO">COFFITO</option>
+                    <option value="RULIWI">RULIWI</option>
+                </select>
+            </div>
+            
+            
+            <div class="form-group">
+                <label for="nome">Nome Completo do Aprendiz:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="dia-curso">Dia do Curso:</label>
+                <select id="dia-curso" name="dia-curso">
+                    <option value="segunda-feira">Segunda-feira</option>
+                    <option value="terca-feira">Terça-feira</option>
+                    <option value="quarta-feira">Quarta-feira</option>
+                    <option value="quinta-feira">Quinta-feira</option>
+                    <option value="sexta-feira">Sexta-feira</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="turno-curso">Turno do Curso:</label>
+                <select id="turno-curso" name="turno-curso">
+                    <option value="manha">Manhã</option>
+                    <option value="tarde">Tarde</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="data-inicio">Data de Início do Atestado:</label>
+                <input type="date" id="data-inicio" name="data-inicio" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="duracao-atestado">Duração do Atestado:</label>
+                <select id="duracao-atestado" name="duracao-atestado">
+                    <option value="1">1 dia</option>
+                    <option value="2">2 dias</option>
+                    <option value="3">3 dias</option>
+                    <option value="4">4 dias</option>
+                    <option value="5">5 dias</option>
+                    <option value="6-10">6 a 10 dias</option>
+                    <option value="11-15">11 a 15 dias</option>
+                    <
+option value="acima-15">Acima de 15 dias</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="arquivo">Envie o Atestado:</label>
+                <input type="file" id="arquivo" name="arquivo" required>
+            </div>
+            
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
